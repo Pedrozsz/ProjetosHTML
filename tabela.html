@@ -1,33 +1,40 @@
-<body>
+<form action="/pagina-processa-dados-do-form" method="post">
+<fieldset>
+    <legend>Dados Gerais</legend>
+    <label for="nome"> Nome:</label>
+     <input type="text" minlength="3" id="nome" />
+    <label for="data_nascimento">Data de Nascimento:</label>
+     <input type="text" id="data_nascimento" />
+    <label for="cpf">CPF:</label>
+     <input type="cpf" minlength="11" id="cpf" />
+</fieldset>
 
-<h2>Tabela com Cabeçalho e Rodapé</h2>
+<fieldset>
+    <legend>Endereço</legend>
+    <label for="tipo_endereço">Tipo:</label>
+     <select id="tipo_endereço">
+        <option value="">Selecione...</option>
+        <option value="">Rua</option>
+        <option value="">Estrada</option>
+        <option value="">Rodovia</option>
+        <option value="">Outro</option>
+     </select>
+     <label for="logradouro_endereço">Logradouro:</label>
+      <input type="text" id="logradouro_endereço" />
+     <label for="numero_endereço">Número:</label>
+      <input type="text" id="numero_endereço" />
+     <label for="complemento_endereço">Complemento:</label>
+      <input type="text" id="complemento_endereço" />
+</fieldset>
 
-<table width="100%" border="1" style="text-align: center;">
-<thead>
+<fieldset>
+    <legend>Fale Conosco</legend>
+    <label for="msg">Mensagem:</label>
+     <textarea type="text" id="msg"></textarea>
+</fieldset>
 
-<tr>
-    <th>Mês</th>
-    <th>Horas/Aula</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-    <td>Junho</td>
-    <td>50   </td>
-</tr>
-
-<tr>
-    <td>Julho</td>
-    <td>50   </td>
-</tr>
-</tbody>
-
-<tfoot>
-<tr>
-    <th>Total</th>
-    <th>100  </th>
-</tr>
-</tfoot>
-</table>
-</body>
+<fieldset>
+    <button type="submit">Enviar Formulário</button>
+    <button type="reset">Limpar Formulário</button>
+</fieldset>
+</form>
